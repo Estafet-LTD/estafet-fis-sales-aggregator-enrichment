@@ -26,7 +26,7 @@ public class Product {
 	@Column(name = "DESCRIPTION", nullable = false)
 	private String description;
 
-	@ManyToOne
+	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "PRODUCT_CATEGORY_ID", nullable = false, referencedColumnName = "PRODUCT_CATEGORY_ID")
 	private ProductCategory category;
 

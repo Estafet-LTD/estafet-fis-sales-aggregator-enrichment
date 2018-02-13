@@ -1,7 +1,5 @@
 package com.estafet.fis.sales.aggregator.restful.sales.enrichment.model;
 
-import java.util.concurrent.ThreadLocalRandom;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -52,11 +50,6 @@ public class ProductSale {
 
 	public ProductSale setProduct(Product product) {
 		this.product = product;
-		return this;
-	}
-
-	ProductSale init() {
-		this.sold = ThreadLocalRandom.current().nextInt(1, 100);
 		return this;
 	}
 
