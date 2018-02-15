@@ -20,9 +20,11 @@ public class EnrichmentConsumerRouteBuilder extends RouteBuilder {
 		 from("amqp:queue:incoming.sales")
 		 	.unmarshal()
 		 		.json(JsonLibrary.Jackson, ProductSalesBatch.class)
+		 		.log("incoming ${body}")
 		 	.bean(enricher, "enrich")
 		 	.marshal()
 		 		.json(JsonLibrary.Jackson)
+		 		.log("outgoing ${body}")
 		 	.to("amqp:topic:enriched.sales");
 		 
 	}
