@@ -1,5 +1,6 @@
 package com.estafet.fis.sales.aggregator.sales.enrichment.route;
 
+import org.apache.camel.ExchangePattern;
 import org.apache.camel.builder.RouteBuilder;
 import org.apache.camel.model.dataformat.JsonLibrary;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,6 +26,7 @@ public class EnrichmentConsumerRouteBuilder extends RouteBuilder {
 		 	.marshal()
 		 		.json(JsonLibrary.Jackson)
 		 		.log("outgoing ${body}")
+		 	.setExchangePattern(ExchangePattern.InOnly)
 		 	.to("amqp:topic:enriched.sales");
 		 
 	}
