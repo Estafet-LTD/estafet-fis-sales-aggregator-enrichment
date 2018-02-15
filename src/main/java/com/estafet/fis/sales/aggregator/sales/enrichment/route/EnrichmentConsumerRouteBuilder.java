@@ -18,9 +18,9 @@ public class EnrichmentConsumerRouteBuilder extends RouteBuilder {
 	public void configure() throws Exception {	
 		
 		 from("amqp:queue:incoming.sales")
+		 	.log("incoming ${body}")
 		 	.unmarshal()
 		 		.json(JsonLibrary.Jackson, ProductSalesBatch.class)
-		 		.log("incoming ${body}")
 		 	.bean(enricher, "enrich")
 		 	.marshal()
 		 		.json(JsonLibrary.Jackson)
