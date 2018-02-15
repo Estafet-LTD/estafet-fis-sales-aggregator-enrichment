@@ -1,4 +1,4 @@
-package com.estafet.fis.sales.aggregator.restful.sales.enrichment.model;
+package com.estafet.fis.sales.aggregator.sales.enrichment.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 

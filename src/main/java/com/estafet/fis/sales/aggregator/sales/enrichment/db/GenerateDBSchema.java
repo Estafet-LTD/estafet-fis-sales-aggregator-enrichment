@@ -1,4 +1,4 @@
-package com.estafet.fis.sales.aggregator.restful.sales.enrichment.db;
+package com.estafet.fis.sales.aggregator.sales.enrichment.db;
 
 
 import java.io.BufferedReader;

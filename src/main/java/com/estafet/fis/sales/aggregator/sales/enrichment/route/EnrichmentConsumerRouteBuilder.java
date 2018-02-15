@@ -1,12 +1,12 @@
-package com.estafet.fis.sales.aggregator.restful.sales.enrichment.route;
+package com.estafet.fis.sales.aggregator.sales.enrichment.route;
 
 import org.apache.camel.builder.RouteBuilder;
 import org.apache.camel.model.dataformat.JsonLibrary;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.estafet.fis.sales.aggregator.restful.sales.enrichment.model.ProductSalesBatch;
-import com.estafet.fis.sales.aggregator.restful.sales.enrichment.service.ProductSalesBatchEnricher;
+import com.estafet.fis.sales.aggregator.sales.enrichment.model.ProductSalesBatch;
+import com.estafet.fis.sales.aggregator.sales.enrichment.service.ProductSalesBatchEnricher;
 
 @Component
 public class EnrichmentConsumerRouteBuilder extends RouteBuilder {

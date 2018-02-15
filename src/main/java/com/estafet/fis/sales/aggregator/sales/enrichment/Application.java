@@ -1,4 +1,4 @@
-package com.estafet.fis.sales.aggregator.restful.sales.enrichment;
+package com.estafet.fis.sales.aggregator.sales.enrichment;
 
 import org.apache.activemq.jms.pool.PooledConnectionFactory;
 import org.apache.camel.component.amqp.AMQPComponent;

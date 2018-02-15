@@ -1,4 +1,4 @@
-package com.estafet.fis.sales.aggregator.restful.sales.enrichment;
+package com.estafet.fis.sales.aggregator.sales.enrichment;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;

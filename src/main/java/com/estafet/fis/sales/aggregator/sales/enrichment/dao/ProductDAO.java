@@ -1,4 +1,4 @@
-package com.estafet.fis.sales.aggregator.restful.sales.enrichment.dao;
+package com.estafet.fis.sales.aggregator.sales.enrichment.dao;
 
 import java.util.List;
 
@@ -7,7 +7,7 @@ import javax.persistence.PersistenceContext;
 
 import org.springframework.stereotype.Repository;
 
-import com.estafet.fis.sales.aggregator.restful.sales.enrichment.model.Product;
+import com.estafet.fis.sales.aggregator.sales.enrichment.model.Product;
 
 @Repository
 public class ProductDAO {

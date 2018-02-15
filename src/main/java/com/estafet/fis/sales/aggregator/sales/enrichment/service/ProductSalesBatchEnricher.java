@@ -1,12 +1,12 @@
-package com.estafet.fis.sales.aggregator.restful.sales.enrichment.service;
+package com.estafet.fis.sales.aggregator.sales.enrichment.service;
 
 import org.apache.camel.Body;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.estafet.fis.sales.aggregator.restful.sales.enrichment.dao.ProductDAO;
-import com.estafet.fis.sales.aggregator.restful.sales.enrichment.model.ProductSale;
-import com.estafet.fis.sales.aggregator.restful.sales.enrichment.model.ProductSalesBatch;
+import com.estafet.fis.sales.aggregator.sales.enrichment.dao.ProductDAO;
+import com.estafet.fis.sales.aggregator.sales.enrichment.model.ProductSale;
+import com.estafet.fis.sales.aggregator.sales.enrichment.model.ProductSalesBatch;
 
 @Component
 public class ProductSalesBatchEnricher {

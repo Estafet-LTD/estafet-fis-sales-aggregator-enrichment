@@ -10,7 +10,7 @@
 	<bean id="myEmf"
 		class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
 		<property name="dataSource" ref="dataSource" />
-		<property name="packagesToScan" value="com.estafet.fis.sales.aggregator.restful.sales.enrichment.model" />
+		<property name="packagesToScan" value="com.estafet.fis.sales.aggregator.sales.enrichment.model" />
 		<property name="jpaVendorAdapter">
 			<bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter" />
 		</property>
