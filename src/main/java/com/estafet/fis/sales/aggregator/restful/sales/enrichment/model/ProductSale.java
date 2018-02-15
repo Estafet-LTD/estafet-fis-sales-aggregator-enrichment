@@ -1,38 +1,12 @@
 package com.estafet.fis.sales.aggregator.restful.sales.enrichment.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.SequenceGenerator;
-import javax.persistence.Table;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
-@Entity
-@Table(name = "PRODUCT_SALE")
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class ProductSale {
 
-	@JsonIgnore
-	@Id
-	@SequenceGenerator(name = "PRODUCT_SALE_ID_SEQ", sequenceName = "PRODUCT_SALE_ID_SEQ", allocationSize = 1)
-	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "PRODUCT_SALE_ID_SEQ")
-	@Column(name = "PRODUCT_SALE_ID")
-	private Integer id;
-
-	@ManyToOne
-	@JoinColumn(name = "PRODUCT_ID", nullable = false, referencedColumnName = "PRODUCT_ID")
 	private Product product;
 
-	@JsonIgnore
-	@ManyToOne
-	@JoinColumn(name = "PRODUCT_SALES_BATCH_ID", nullable = false, referencedColumnName = "PRODUCT_SALES_BATCH_ID")
-	private ProductSalesBatch batch;
-
-	@Column(name = "SOLD", nullable = false)
 	private int sold;
 
 	public int getSold() {
@@ -41,11 +15,6 @@ public class ProductSale {
 
 	public Product getProduct() {
 		return product;
-	}
-
-	public ProductSale setBatch(ProductSalesBatch batch) {
-		this.batch = batch;
-		return this;
 	}
 
 	public ProductSale setProduct(Product product) {
